@@ -11,21 +11,21 @@ time.sleep(0.5)
 
 df_data = st.session_state["data"]
 
-#1. Seleciona o Clube
+
 clubes = df_data["Club"].unique()
 club = st.sidebar.selectbox("Clube", clubes)
 
-#2. Filtra Jogadores do Clube Selecionado
+
 df_players_do_clube = df_data[(df_data["Club"] == club)]
 players_do_clube = df_players_do_clube["Name"].unique()
 
-#3. Seleciona o Jogador usando a lista filtrada
+
 player = st.sidebar.selectbox("Jogador", players_do_clube)
 
-#4. Encontra os Status do Jogador Selecionado
+
 player_stats = df_data[df_data["Name"] == player].iloc[0]
 
-#5. Exibe Imagem do Jogador
+
 st.image(player_stats["Photo"])
 st.title(player_stats["Name"])
 

@@ -19,9 +19,10 @@ if "data" not in st.session_state:
 st.markdown("# FIFA23 OFFICIAL DATASET! ⚽")
 st.sidebar.markdown("Desenvolvido por [Acacio Guirra](https://github.com/acacioguirra)")
 
-btn = st.button("Acesse os dados do Kaggle")
-if btn:
-    webbrowser.open_new_tab("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
+btn = st.link_button(
+    "Acesse os dados do Kaggle",
+    "https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data"
+    )
 
 st.markdown("""
 O conjunto de dados de jogadores de futebol de 2017 a 2023 fornece informações abrangentes sobre jogadores de futebol profissionais. O conjunto de dados contém uma ampla gama de atributos, incluindo dados demográficos do jogador, características físicas, estatísticas de jogo, detalhes do contrato e afiliações de clubes.

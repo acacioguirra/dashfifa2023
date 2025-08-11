@@ -11,7 +11,7 @@ time.sleep(0.5)
 
 df_data = st.session_state["data"]
 
-#1. Seleciona o Clube
+
 clubes = df_data["Club"].unique()
 club = st.sidebar.selectbox("Clube", clubes)
 
